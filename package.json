@@ -1,0 +1,26 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "getting types.js to work",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "node-static": "^0.7.11",
+    "npm": "^6.8.0",
+    "typed.js": "^2.0.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jasko-A/Portfolio.git"
+  },
+  "author": "Jasmin Adzic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jasko-A/Portfolio/issues"
+  },
+  "homepage": "https://github.com/Jasko-A/Portfolio#readme"
+}
