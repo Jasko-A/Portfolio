@@ -120,7 +120,7 @@
 }
 
 #about {
-	height: 500px;
+	
 }
 
 #main-body {
@@ -133,6 +133,56 @@
 	width: 60%;
 	font-size: 20px;
 }
+
+.body-title {
+	border-bottom: 1px solid grey;
+	padding-top: 60px;
+}
+#education-title {
+	padding-top: 80px;
+}
+#education {
+	display: flex;
+	flex-direction: column;
+}
+.school {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 30px;
+	font-weight: 500;
+}
+.school-extra {
+	/*padding-left: 40px;*/
+	display: flex;
+	font-size: 20px;
+}
+
+.fa-angle-right {
+	font-size: 25px;
+    padding: 10px;
+    padding-left: 13px;
+    padding-right: 13px;
+    border: 1.5px solid #e7e7e7;
+    border-radius: 4px;
+}
+
+
+
+.fa-angle-down {
+	font-size: 25px;
+    padding: 10px;
+    padding-left: 13px;
+    padding-right: 13px;
+    border: 1.5px solid #e7e7e7;
+    border-radius: 4px;
+    color: blue;
+}
+
+#degree {
+	align-self: center;
+    padding-left: 20px;
+}
+
 
 
 

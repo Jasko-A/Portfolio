@@ -93,20 +93,131 @@ class Counter extends React.Component {
       );  	
 	}
 }
+
+class School extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            davis_text: ["University of California, Davis.","Sep. 2016 \u2014 June 2018"],
+            deanza_text: ["De Anza College. Cupertino,CA", "Sep. 2014 \u2014 June 2016"]
+        };
+    }
+
+    render() {
+        if(this.props.id == "davis")
+        {
+            return(
+                React.createElement('div',{className: this.props.className},
+                    React.createElement('div',{id: this.props.id},this.state.davis_text[0]),
+                    React.createElement('div',{className: "duration"},this.state.davis_text[1])
+                )
+            );
+        }
+        if(this.props.id == "deanza")
+        {
+            return(
+                React.createElement('div',{className: this.props.className},
+                    React.createElement('div',{id: this.props.id},this.state.deanza_text[0]),
+                    React.createElement('div',{className: "duration"},this.state.deanza_text[1])
+                )
+            );
+        }
+        
+    }
+};
+class Courses extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            
+        };
+    }
+
+    render () {
+        if(this.props.school == "davis")
+        {
+            return (
+                React.createElement("ul", {className: "list", id: this.props.school+'-list', style:{display: (this.props.popup) ? "block" : "none"}},
+                    React.createElement("li",{},"Operating Systems"),
+                    React.createElement("li",{},"Web Programming"),
+                    React.createElement("li",{},"Machine Learning"),
+                    React.createElement("li",{},"Computer Architecture"),
+                    React.createElement("li",{},"Computer Networks"),
+                    React.createElement("li",{},"Algorithm Design"),
+                    React.createElement("li",{},"Discrete Math"),
+                    React.createElement("li",{},"Abstract Math"),
+                    React.createElement("li",{},"Probability and Statistics CS")
+                )
+            );
+        }
+        if(this.props.school == "deanza")
+        {
+            return (
+                React.createElement("ul", {className: "list", id: this.props.school+'-list', style:{display: (this.props.popup) ? "block" : "none"}},
+                    React.createElement("li",{},"C++ Data Structures"),
+                    React.createElement("li",{},"C++ OOP"),
+                    React.createElement("li",{},"Object Oriented Analysis & Design"),
+                    React.createElement("li",{},"Java Programming")
+                    
+                )
+            );
+        }
+
+    }
+};
+
+class School_info extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            school: this.props.school,
+            arrow: 0,
+            school_degree: ["B. S. in Computer Science", "G. E. & CS courses for transfer"]
+        };
+
+    }
+
+    change_arrow() {
+        if(this.state.arrow == 0)
+            this.setState({arrow: 1})
+        else
+            this.setState({arrow: 0})
+    }
+
+    render() {
+        return(
+            React.createElement('div',{},
+                React.createElement('div',{className: this.props.className},
+                    React.createElement('i',{className: (this.state.arrow) ? "fas fa-angle-down": "fas fa-angle-right", onClick: this.change_arrow.bind(this)}),
+                    React.createElement('div', {id: "degree"}, this.props.schoolDegree)
+                ),
+                React.createElement(Courses, {popup: this.state.arrow, school: this.state.school}, "HELLO")
+            )
+            
+        );
+    }
+};
+
 class Main extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            
+        };
     }
     render() {
         return (
             React.createElement('div',{className: this.props.className},
                 React.createElement('h2',{className: "body-title"},"About Me"),
                 React.createElement('div',{className: "main-body-section", id: "about"}, "I have great knowledge in fields of developement such as full-stack web development, applicaiton development, and machine learning. Always had a knack for anything computer related and am eager to get my hands on new technology and hack them."),
-                React.createElement('h2',{className: "body-title"},"Education"),
+                React.createElement('h2',{className: "body-title", id: "education-title"},"Education"),
                 React.createElement('div',{className: "main-body-section", id: "education"},
-                    React.createElement('div', {className: "school", id: "davis"},"UNIVERSITY OF CALIFORNIA< DAVIS"),
-                    React.createElement('div', {className:"school", id:"de-anza"},"DE ANZA COLLEGE")
+                    React.createElement(School,{className: "school", id: "davis"}),
+                    React.createElement(School_info,{className: "school-extra", school: "davis", schoolDegree: "B. S. in Computer Science"}),
+                    React.createElement(School,{className: "school", id: "deanza"}),
+                    React.createElement(School_info,{className: "school-extra", school: "deanza", schoolDegree: "G. E. & CS courses for transfer"})
+                        
+                    
                 )
             )
         );
