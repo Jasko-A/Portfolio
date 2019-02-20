@@ -26,7 +26,7 @@
       <div class="col-8 offset-2" id="landing-page-header">
         <div class="header">
           <div class="left-header">
-              A&#272&#381IC.i0h
+              JASMIN.io
           </div>
           <div class="right-header">
               <a class="header-links" href="#landing-page">HOME</a>
@@ -46,15 +46,25 @@
       </div>
     </div>
     
-    <div>
-      YOLO xD
+    <div id="main-body">
+      
+    </div>
+
+    <div class="menu" >
+      <div id="content" style="display: none">
+        <a class="header-links" href="#landing-page">HOME</a>
+        <a class="header-links" href="#about">ABOUT</a>
+        <a class="header-links" href="#projects">PROJECTS</a>
+      </div>
+      <button class="fas fa-bars" id="dropdown" onclick="openMenu()" ></button>
     </div>
 
   <script src="https://unpkg.com/react@15/dist/react.js"></script> 
   <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
   <script src="react-display.js"></script>
-  <script src="index.js"></script>
+  
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -64,9 +74,24 @@
     var typed = new Typed('#typedi', {
       strings: ['Hello my Name is Jasmin Adzic.\n I am a software engineer :)'],
       typeSpeed: 60,
-      loop: true,
+      loop: false,
       backDelay: 10000
     });
+  </script>
+
+  <script>
+  function openMenu()
+  {
+    var state = document.getElementById("content").style.display;
+    if(state == "none")
+    {
+      document.getElementById("content").style.display="flex";
+    }
+    else
+    {
+      document.getElementById("content").style.display="none";
+    }
+  }
   </script>
     
   </body>

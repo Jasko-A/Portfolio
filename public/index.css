@@ -64,7 +64,7 @@
 .header-links:hover {
 	text-decoration: none;
 	color: white;
-	background-color:#2323e0;
+	background-color:#3c7ce8;
     border-radius: 4px;
 }
 
@@ -87,8 +87,52 @@
 	align-self:center;
 }
 
+#dropdown {
+	position: fixed;
+    display: flex;
+    bottom: 20px;
+    right: 28px;
+    font-size: 40px;
+    padding: 13px;
+    background: white;
+	border: 1.5px solid #e7e7e7;
+    border-radius: 4px;
+    
+    color: #343a44;
+}
 
+/*#dropdown:hover {
+	background: white;
+	border: 1px solid #e7e7e7
+}
+*/
+#content {
+	
+	position: fixed;
+	bottom: 100px;
+    right: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #094AB2;
+    border-radius: 4px;
+    text-align: right;
+}
 
+#about {
+	height: 500px;
+}
+
+#main-body {
+	display: flex;
+	justify-content: center;
+	padding-top: 30px;
+}
+
+.all-info {
+	width: 60%;
+	font-size: 20px;
+}
 
 
 
@@ -116,6 +160,10 @@
     font-size: 5vw;
     color: white;
 
+}
+
+.right-header{
+	display: none;
 }
 
 }
