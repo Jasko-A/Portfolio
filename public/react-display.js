@@ -198,6 +198,61 @@ class School_info extends React.Component {
     }
 };
 
+class Work extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            jobs: ["SABRO Communications Inc.", "EtainPower", "UNITRANS", "Santa Clara Social Services Agency"],
+            dates: ["June 2013 \u2014 Present", "March 2018 \u2014 June 2018", "Oct. 2017 \u2014 Dec. 2017", "June 2015 \u2014 Sep. 2015"],
+            roles: ["Low-voltage Technician", "Software Engineer, Web", "IT Assistant", "Webmaster Intern"]
+        };
+    }
+
+    render() {
+        return (
+            React.createElement('div', {className: this.props.className},
+                
+                React.createElement('div', {className: "job-desc"},
+                    React.createElement('img',{src:"/images/SABRO_main_logo.png", id: "sabro-logo"}),
+                    React.createElement('div',{className: "job-title"},
+                        React.createElement('div',{},this.state.jobs[0]),
+                        React.createElement('div',{},this.state.dates[0])
+                    ),
+                    React.createElement('div',{className: "job-position"},this.state.roles[0])
+                ),
+                
+                React.createElement('div',{className: "job-desc"},
+                    React.createElement('img',{src:"/images/etainpower.png", id: "etain-logo"}),
+                    React.createElement('div',{className: "job-title"},
+                        React.createElement('div',{},this.state.jobs[1]),
+                        React.createElement('div',{},this.state.dates[1])
+                    ),
+                    React.createElement('div',{className: "job-position"},this.state.roles[1])
+                ),
+                React.createElement('div',{className: "job-desc"},
+                    React.createElement('img',{src:"/images/unitrans.jpg", id: "uni-logo"}),
+                    React.createElement('div',{className: "job-title"},
+                        React.createElement('div',{},this.state.jobs[2]),
+                        React.createElement('div',{},this.state.dates[2])
+                    ),
+                    React.createElement('div',{className: "job-position"},this.state.roles[2])
+                ),
+                React.createElement('div',{className: "job-desc"},
+                    React.createElement('img',{src:"/images/santaclara.png", id: "santa-logo"}),
+                    React.createElement('div',{className: "job-title"},
+                        React.createElement('div',{},this.state.jobs[3]),
+                        React.createElement('div',{},this.state.dates[3])
+                    ),
+                    React.createElement('div',{className: "job-position"},this.state.roles[3])
+                )
+          
+            )
+            
+        );
+    }
+
+};
+
 class Main extends React.Component {
     constructor(props) {
         super(props);
@@ -208,8 +263,8 @@ class Main extends React.Component {
     render() {
         return (
             React.createElement('div',{className: this.props.className},
-                React.createElement('h2',{className: "body-title"},"About Me"),
-                React.createElement('div',{className: "main-body-section", id: "about"}, "I have great knowledge in fields of developement such as full-stack web development, applicaiton development, and machine learning. Always had a knack for anything computer related and am eager to get my hands on new technology and hack them."),
+                React.createElement('h2',{className: "body-title", id: "about"},"About Me"),
+                React.createElement('div',{className: "main-body-section"}, "I have great knowledge in fields of developement such as full-stack web development, applicaiton development, and machine learning. Always had a knack for anything computer related and am eager to get my hands on new technology and hack them."),
                 React.createElement('h2',{className: "body-title", id: "education-title"},"Education"),
                 React.createElement('div',{className: "main-body-section", id: "education"},
                     React.createElement(School,{className: "school", id: "davis"}),
@@ -218,6 +273,10 @@ class Main extends React.Component {
                     React.createElement(School_info,{className: "school-extra", school: "deanza", schoolDegree: "G. E. & CS courses for transfer"})
                         
                     
+                ),
+                React.createElement('h2',{className: "body-title", id: "work-title"},"Work Experience"),
+                React.createElement('div', {className: "main-body-section", id:"work-experience"},
+                    React.createElement(Work, {className: "jobs"},)
                 )
             )
         );

@@ -178,12 +178,50 @@
     color: blue;
 }
 
+.fa-angle-right:hover {
+	cursor: pointer;
+}
+
 #degree {
 	align-self: center;
     padding-left: 20px;
 }
 
+.jobs {
+	display: flex;
+	flex-direction: column;
+	
+}
+.job-desc {
+	padding-top: 30px;
+}
 
+#sabro-logo {
+	height: 50px;
+	width: 65px;
+}
+
+#etain-logo {
+	height: 50px;
+}
+
+#uni-logo {
+	height: 50px;
+}
+
+#santa-logo {
+	height: 50px;
+}
+
+.job-title {
+	display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+}
+
+.job-position {
+	padding-left: 40px;
+}
 
 
 
