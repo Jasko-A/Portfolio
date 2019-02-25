@@ -253,6 +253,29 @@ class Work extends React.Component {
 
 };
 
+class Projects extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            title: ['Job Search Data Analysis', 'discover.ai', 'Machine Learning Jokes Database', 'USDA Food Search', 'School Gradebook System'],
+            desc: ['Analysis and Report of my on-going quest to get a career in Software Engineering', 'Awarded Best Health & Wellness hack of HackDavis 2018', 'Developed a drug predicting AI using deep neural network working on a google cloud platform', 'Created a database to host a large amount of jokes that would later be used to predict jokes the user likes based on user attributes', 'Developed various data structures for fast insertion and searching of foods in the USDA database', 'Developed in Java the gradebook uses OOP techniques to have different user interfaces work seemlessly for teachers and students'],
+            technologies: {
+                jobAnalysis:['python','matplotlib','pandas','keras','numpy'],
+                discoverAI:['Javascript','React.js','HTML','CSS','Bootstrap','Python','Keras','matplotlib','pandas','numpy','Google Cloud PLatform'],
+                jokes:['mySQL','Javascript','Python','Django','HTML', 'CSS', 'Bootstrap', 'Azure'],
+                usda:['C++'],
+                gradebook:['Java'],
+            },
+            links:['https://github.com/Jasko-A/Job-Application-Statistics','https://github.com/Jasko-A/discover.ai','https://devpost.com/software/discover-ai#updates', 'https://github.com/Jasko-A/database-project', 'https://github.com/Jasko-A/CIS-Project-Final', 'https://github.com/Jasko-A/Java-GradeBookSystem']
+        };
+    }
+
+    render() {
+
+    }
+};
+
+
 class Main extends React.Component {
     constructor(props) {
         super(props);
@@ -277,6 +300,10 @@ class Main extends React.Component {
                 React.createElement('h2',{className: "body-title", id: "work-title"},"Work Experience"),
                 React.createElement('div', {className: "main-body-section", id:"work-experience"},
                     React.createElement(Work, {className: "jobs"},)
+                ),
+                React.createElement('h2',{className: "body-title", id: "work-title"},"Projects"),
+                React.createElement('div', {className: "main-body-section", id:"project-experience"},
+                    // React.createElement(Projects, {className: "projects"},)
                 )
             )
         );
