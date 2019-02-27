@@ -271,7 +271,76 @@ class Projects extends React.Component {
     }
 
     render() {
-
+        return (
+            React.createElement('div', {className:this.props.className},
+                React.createElement('div',{className: "project-desc"},
+                    React.createElement('div',{className: "project-title"},this.state.title[0]),
+                    React.createElement('div',{className: "project-body"},
+                        React.createElement('div', {className: "project-info"},this.state.desc[0]),
+                        React.createElement('div', {className: "project-techs"},
+                            React.createElement('div',{className:"tech-button"},this.state.technologies.jobAnalysis[0]),
+                            React.createElement('div',{className:"tech-button"},this.state.technologies.jobAnalysis[1]),
+                            React.createElement('div',{className:"tech-button"},this.state.technologies.jobAnalysis[2]),
+                            React.createElement('div',{className:"tech-button"},this.state.technologies.jobAnalysis[3]),
+                            React.createElement('div',{className:"tech-button"},this.state.technologies.jobAnalysis[4])
+                        )
+                    )
+                ),
+                React.createElement('div',{className: "project-desc"},
+                    React.createElement('div',{className: "project-title"},this.state.title[1]),
+                    React.createElement('div',{className: "project-body"},
+                        React.createElement('div', {className: "project-info"},this.state.desc[1]),
+                        React.createElement('div', {className: "project-techs"},
+                            React.createElement('div',{className:"tech-button"},this.state.technologies.discoverAI[0]),
+                            React.createElement('div',{className:"tech-button"},this.state.technologies.discoverAI[1]),
+                            React.createElement('div',{className:"tech-button"},this.state.technologies.discoverAI[2]),
+                            React.createElement('div',{className:"tech-button"},this.state.technologies.discoverAI[3]),
+                            React.createElement('div',{className:"tech-button"},this.state.technologies.discoverAI[4]),
+                            React.createElement('div',{className:"tech-button"},this.state.technologies.discoverAI[5]),
+                            React.createElement('div',{className:"tech-button"},this.state.technologies.discoverAI[6]),
+                            React.createElement('div',{className:"tech-button"},this.state.technologies.discoverAI[7]),
+                            React.createElement('div',{className:"tech-button"},this.state.technologies.discoverAI[8]),
+                            React.createElement('div',{className:"tech-button"},this.state.technologies.discoverAI[9]),
+                            React.createElement('div',{className:"tech-button"},this.state.technologies.discoverAI[10])
+                        )
+                    )
+                ),
+                React.createElement('div',{className: "project-desc"},
+                    React.createElement('div',{className: "project-title"},this.state.title[2]),
+                    React.createElement('div',{className: "project-body"},
+                        React.createElement('div', {className: "project-info"},this.state.desc[2]),
+                        React.createElement('div', {className: "project-techs"},
+                            React.createElement('div',{className:"tech-button"},this.state.technologies.jokes[0]),
+                            React.createElement('div',{className:"tech-button"},this.state.technologies.jokes[1]),
+                            React.createElement('div',{className:"tech-button"},this.state.technologies.jokes[2]),
+                            React.createElement('div',{className:"tech-button"},this.state.technologies.jokes[3]),
+                            React.createElement('div',{className:"tech-button"},this.state.technologies.jokes[4]),
+                            React.createElement('div',{className:"tech-button"},this.state.technologies.jokes[5]),
+                            React.createElement('div',{className:"tech-button"},this.state.technologies.jokes[6]),
+                            React.createElement('div',{className:"tech-button"},this.state.technologies.jokes[7])
+                        )
+                    )
+                ),
+                React.createElement('div',{className: "project-desc"},
+                    React.createElement('div',{className: "project-title"},this.state.title[3]),
+                    React.createElement('div',{className: "project-body"},
+                        React.createElement('div', {className: "project-info"},this.state.desc[3]),
+                        React.createElement('div', {className: "project-techs"},
+                            React.createElement('div',{className:"tech-button"},this.state.technologies.usda[0])
+                        )
+                    )
+                ),
+                React.createElement('div',{className: "project-desc"},
+                    React.createElement('div',{className: "project-title"},this.state.title[4]),
+                    React.createElement('div',{className: "project-body"},
+                        React.createElement('div', {className: "project-info"},this.state.desc[4]),
+                        React.createElement('div', {className: "project-techs"},
+                            React.createElement('div',{className:"tech-button"},this.state.technologies.gradebook[0])
+                        )
+                    )
+                )
+            )
+        );
     }
 };
 
@@ -301,9 +370,9 @@ class Main extends React.Component {
                 React.createElement('div', {className: "main-body-section", id:"work-experience"},
                     React.createElement(Work, {className: "jobs"},)
                 ),
-                React.createElement('h2',{className: "body-title", id: "work-title"},"Projects"),
-                React.createElement('div', {className: "main-body-section", id:"project-experience"},
-                    // React.createElement(Projects, {className: "projects"},)
+                React.createElement('h2',{className: "body-title", id:"projects"},"Projects"),
+                React.createElement('div', {className: "main-body-section", id:"projects-body"},
+                    React.createElement(Projects, {className: "projects"},)
                 )
             )
         );
