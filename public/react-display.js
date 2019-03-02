@@ -213,7 +213,7 @@ class Work extends React.Component {
             React.createElement('div', {className: this.props.className},
                 
                 React.createElement('div', {className: "job-desc"},
-                    React.createElement('img',{src:"/images/SABRO_main_logo.png", id: "sabro-logo"}),
+                    React.createElement('img',{src:"./images/SABRO_main_logo.png", id: "sabro-logo"}),
                     React.createElement('div',{className: "job-title"},
                         React.createElement('div',{},this.state.jobs[0]),
                         React.createElement('div',{},this.state.dates[0])
@@ -222,7 +222,7 @@ class Work extends React.Component {
                 ),
                 
                 React.createElement('div',{className: "job-desc"},
-                    React.createElement('img',{src:"/images/etainpower.png", id: "etain-logo"}),
+                    React.createElement('img',{src:"./images/etainpower.png", id: "etain-logo"}),
                     React.createElement('div',{className: "job-title"},
                         React.createElement('div',{},this.state.jobs[1]),
                         React.createElement('div',{},this.state.dates[1])
@@ -230,7 +230,7 @@ class Work extends React.Component {
                     React.createElement('div',{className: "job-position"},this.state.roles[1])
                 ),
                 React.createElement('div',{className: "job-desc"},
-                    React.createElement('img',{src:"/images/unitrans.jpg", id: "uni-logo"}),
+                    React.createElement('img',{src:"./images/unitrans.jpg", id: "uni-logo"}),
                     React.createElement('div',{className: "job-title"},
                         React.createElement('div',{},this.state.jobs[2]),
                         React.createElement('div',{},this.state.dates[2])
@@ -238,7 +238,7 @@ class Work extends React.Component {
                     React.createElement('div',{className: "job-position"},this.state.roles[2])
                 ),
                 React.createElement('div',{className: "job-desc"},
-                    React.createElement('img',{src:"/images/santaclara.png", id: "santa-logo"}),
+                    React.createElement('img',{src:"./images/santaclara.png", id: "santa-logo"}),
                     React.createElement('div',{className: "job-title"},
                         React.createElement('div',{},this.state.jobs[3]),
                         React.createElement('div',{},this.state.dates[3])
@@ -274,7 +274,15 @@ class Projects extends React.Component {
         return (
             React.createElement('div', {className:this.props.className},
                 React.createElement('div',{className: "project-desc"},
-                    React.createElement('div',{className: "project-title"},this.state.title[0]),
+                    React.createElement('div',{className: "project-title"},
+                        React.createElement('div',{},this.state.title[0]),
+                        React.createElement('div',{className:"links"},
+                            React.createElement('a',{href: this.state.links[0], target:"_blank"},
+                                React.createElement('i', {className:"fab fa-github"},)
+                            )
+                            
+                        )
+                    ),
                     React.createElement('div',{className: "project-body"},
                         React.createElement('div', {className: "project-info"},this.state.desc[0]),
                         React.createElement('div', {className: "project-techs"},
@@ -287,7 +295,18 @@ class Projects extends React.Component {
                     )
                 ),
                 React.createElement('div',{className: "project-desc"},
-                    React.createElement('div',{className: "project-title"},this.state.title[1]),
+                    React.createElement('div',{className: "project-title"},
+                        React.createElement('div',{},this.state.title[1]),
+                        React.createElement('div',{className:"links"},
+                            React.createElement('a',{href:this.state.links[1], target:"_blank"},
+                                React.createElement('i', {className:"fab fa-github"},)
+                            ),
+                            React.createElement('a',{href: this.state.links[2], target:"_blank"},
+                                React.createElement('i', {className:"fas fa-external-link-alt"},)
+                            )
+                            
+                        )
+                    ),
                     React.createElement('div',{className: "project-body"},
                         React.createElement('div', {className: "project-info"},this.state.desc[1]),
                         React.createElement('div', {className: "project-techs"},
@@ -306,7 +325,15 @@ class Projects extends React.Component {
                     )
                 ),
                 React.createElement('div',{className: "project-desc"},
-                    React.createElement('div',{className: "project-title"},this.state.title[2]),
+                    React.createElement('div',{className: "project-title"},
+                        React.createElement('div',{},this.state.title[2]),
+                        React.createElement('div',{className:"links"},
+                            React.createElement('a',{href: this.state.links[3], target:"_blank"},
+                                React.createElement('i', {className:"fab fa-github"},)
+                            )
+                            
+                        )
+                    ),
                     React.createElement('div',{className: "project-body"},
                         React.createElement('div', {className: "project-info"},this.state.desc[2]),
                         React.createElement('div', {className: "project-techs"},
@@ -322,7 +349,15 @@ class Projects extends React.Component {
                     )
                 ),
                 React.createElement('div',{className: "project-desc"},
-                    React.createElement('div',{className: "project-title"},this.state.title[3]),
+                    React.createElement('div',{className: "project-title"},
+                        React.createElement('div',{},this.state.title[3]),
+                        React.createElement('div',{className:"links"},
+                            React.createElement('a',{href: this.state.links[4], target:"_blank"},
+                                React.createElement('i', {className:"fab fa-github"},)
+                            )
+                            
+                        )
+                    ),
                     React.createElement('div',{className: "project-body"},
                         React.createElement('div', {className: "project-info"},this.state.desc[3]),
                         React.createElement('div', {className: "project-techs"},
@@ -331,7 +366,15 @@ class Projects extends React.Component {
                     )
                 ),
                 React.createElement('div',{className: "project-desc"},
-                    React.createElement('div',{className: "project-title"},this.state.title[4]),
+                    React.createElement('div',{className: "project-title"},
+                        React.createElement('div',{},this.state.title[4]),
+                        React.createElement('div',{className:"links"},
+                            React.createElement('a',{href: this.state.links[5], target:"_blank"},
+                                React.createElement('i', {className:"fab fa-github"},)
+                            )
+                            
+                        )
+                    ),
                     React.createElement('div',{className: "project-body"},
                         React.createElement('div', {className: "project-info"},this.state.desc[4]),
                         React.createElement('div', {className: "project-techs"},
@@ -373,8 +416,8 @@ class Main extends React.Component {
                 React.createElement('h2',{className: "body-title", id:"projects"},"Projects"),
                 React.createElement('div', {className: "main-body-section", id:"projects-body"},
                     React.createElement(Projects, {className: "projects"},)
-                )
-            )
+                )  
+            )   
         );
     }
 };

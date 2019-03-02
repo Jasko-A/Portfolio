@@ -8,6 +8,7 @@ var http  = require('http');
 var static = require('node-static');
 var url = require('url');
 var request = require('axios');
+var opn = require('opn');
 
 function static_handler(req, res) {
 	req.addListener('end', function() {
@@ -21,6 +22,19 @@ function static_handler(req, res) {
 		}
 	});
 }).resume();
+}
+
+function page_handler(req, res) {
+	console.log("req::" + req.url);
+	req.addListener	('end', function() {
+			if (!req) { 
+				res.writeHead(404, {"Content-Type": "text/html"});
+				res.write("ERROR 404: File not Found");  
+				res.end();
+			}
+			linkURL = req.url.split('?')
+			opn(linkURL[1]);
+	}).resume();
 }
 
 function increment_handler(url, res) {
@@ -57,8 +71,12 @@ function handler(req, res) {
 	url = url.replace('/','');
 	url = url.split('?');
 
+
 	//make sure that the url is correct
+	console.log("Initial URL: ");
 	console.log(url);
+	
+
 	//console.log("The Length is: " + url.length);
 	//console.log(typeof url); 
 
@@ -69,15 +87,10 @@ function handler(req, res) {
 		}
 		else 
 		{
-			var subUrl = url[1].split('/'); //gets the login info from the url and stored in subUrl
-			console.log(subUrl);
-			if(subUrl.length == 1)
-			{
-				increment_handler(subUrl, res);
-			}
-			if(subUrl.length == 2) {
-				login_handler(subUrl, res);
-			}
+			linkURL = url[1];
+			// opn(linkURL);
+			page_handler(req,res);
+			
 		}
 	}
 }
