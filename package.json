@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "axios": "^0.18.0",
+    "gh-pages": "^2.0.1",
     "node-static": "^0.7.11",
     "npm": "^6.8.0",
     "openurl": "^1.1.1",
@@ -13,7 +14,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d public"
   },
   "repository": {
     "type": "git",
@@ -24,5 +26,5 @@
   "bugs": {
     "url": "https://github.com/Jasko-A/Portfolio/issues"
   },
-  "homepage": "https://github.com/Jasko-A/Portfolio#readme"
+  "homepage":"https://Jasko-A.github.io/Portfolio"
 }
